@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 3</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="./js/moment.js"></script>
+    <style>
+      .nav {
+        height: 10%;
+        width: 100%;
+        color: #fff;
+        box-sizing: border-box;
+      }
+      .bottom {
+        width: 100%;
+        padding: 10px 20px;
+        border-top: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+      .top {
+        display: flex;
+        width: 100%;
+        padding-left: 20px;
+        box-sizing: border-box;
+        justify-content: space-between;
+      }
+      .left {
+        display: flex;
+      }
+      .name {
+        font-size: 30px;
+        width: 130px;
+        margin-right: 50px;
+        font-weight: 600;
+      }
+      .project {
+        font-size: 26px;
+        width: 140px;
+      }
+      .nav-box {
+        height: 100%;
+        color: #fff;
+      }
+      .nav-box div {
+        padding-right: 20px;
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+      #now-time {
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+        font-weight: 500;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="now-time"></div>
+    <img src="./images/网站图片/主页背景.png" alt="" width="100%" height="85%" />
+    <div class="nav">
+      <div class="top">
+        <div class="left">
+          <div class="name">MUSEUM OF TIME</div>
+          <div class="project">Project III Query</div>
+        </div>
+        <div class="nav-box">
+          <a href="./visit.html"><div>Visit</div></a>
+          <a href="./about.html"><div>About</div></a>
+        </div>
+      </div>
+      <div class="bottom">EXPLORING THE RELATIONSHIP BETWEEN TIME AND WEB</div>
+    </div>
+    <script>
+      let div = document.getElementById('now-time');
+      div.innerHTML = moment().format('YYYY-MM-DD HH:mm:ss SSS');
+      setInterval(() => {
+        div.innerHTML = moment().format('YYYY-MM-DD HH:mm:ss SSS');
+      });
+    </script>
+  </body>
 </html>
