@@ -1,80 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/common.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/common.css" />
     <title>Document</title>
     <style>
-        .first-page{
-            width: 100%;
-            height: 100vh;
-            position: relative;
-        }
-        .title-box{
-            color: #fff;
-            position: absolute;
-            left: 50%;
-            bottom: 100px;
-            transform: translateX(-50%);
-            background-color: dimgrey;
-            padding-top: 30px;
-
-        }
-        .title1{
-            text-align: center;
-            font-weight: 500;
-            font-size: 30px;
-        }
-        .title2{
-            font-weight: 900;
-            font-size: 120px;
-        }
-        /* images */
-        .second-page{
-            height: 3000px;
-            display: flex;
-        }
-        .time-box{
-            height: 100%;
-            width: 200px;
-            background-color: #ccc;
-        }
-        .time-text{
-            width: 600px;
-            background: red;
-        }
-        .left-rule{
-            width: 28px;
-            background: url(./images/网站图片/刻度1.png);
-        }
-        .old-image{
-            width: 500px;
-        }
-        .right-rule{
-            width: 28px;
-            background: url(./images/网站图片/刻度.png);
-        }
+      .first-page {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+      .title-box {
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        bottom: 100px;
+        transform: translateX(-50%);
+        background-color: rgba(105,105,105,.9);
+        padding-top: 30px;
+        border-radius: 10px;
+      }
+      .title1 {
+        text-align: center;
+        font-weight: 500;
+        font-size: 30px;
+      }
+      .title2 {
+        font-weight: 900;
+        font-size: 120px;
+      }
+      /* images */
+      .second-page {
+        display: flex;
+      }
+      .time-box {
+        height: 100%;
+        width: 200px;
+      }
+      /* 随机时间 */
+      .random-time {
+        color: #fff;
+        font-size: 76px;
+        height: 100px;
+        text-align: center;
+      }
+      .time-text {
+        width: 600px;
+      }
+      .left-rule {
+        width: 28px;
+        background: url(./images/网站图片/刻度1.png);
+      }
+      .old-image {
+        width: 500px;
+        padding: 0 20px;
+      }
+      .right-rule {
+        width: 28px;
+        background: url(./images/网站图片/刻度.png);
+      }
+      .future-image {
+        flex: 1;
+        padding: 0 10px;
+      }
+      .time-content {
+        padding: 20px 100px 10px 15px;
+        color: #fff;
+        position: relative;
+        box-sizing: border-box;
+        height: 300px;
+        margin-bottom: 20px;
+      }
+      .year {
+        writing-mode: vertical-lr;
+        font-size: 60px;
+        position: absolute;
+        padding-top: 20px;
+        top: 10px;
+        right: 10px;
+      }
+      .mar {
+        margin-bottom: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="first-page">
-        <img src="./images/网站图片/Explore图.png" alt="" width="100%" height="100%">
-        <div class="title-box">
-            <div class="title1">The Relationship Between Time And Web is</div>
-            <div class="title2">
-                "Coexistence"
-            </div>
-        </div>
+      <img src="./images/网站图片/Explore图.png" alt="" width="100%" height="100%" />
+      <div class="title-box">
+        <div class="title1">The Relationship Between Time And Web is</div>
+        <div class="title2">"Coexistence"</div>
+      </div>
     </div>
     <div class="second-page">
-        <div class="time-box"></div>
-        <div class="time-text"></div>
-        <div class="left-rule"></div>
-        <div class="old-image"></div>
-        <div class="right-rule"></div>
-        <div class="future-image"></div>
+      <div class="time-box" id="time-box">
+        <!-- <div class="random-time" id="time-1">08:09</div>
+            <div class="random-time" id="time-2">08:09</div> -->
+      </div>
+      <div class="time-text">
+        <div class="time-content">
+          Arpanet was the first real network to run on packet switching technology (new at the time). On October 29, 1969, computers at Stanford and UCLA connected for the first time. In effect, they were the first hosts on what would one day become the Internet. The first message sent across the network was supposed to be “Login”, but reportedly, the link between the two colleges crashed on the letter “g”.
+          <div class="year">1969</div>
+        </div>
+        <!-- 1971 -->
+        <div class="time-content">
+          One of the most impressive developments of 1971 was the start of Project Gutenberg. Project Gutenberg, for those unfamiliar with the site, is a global effort to make books and documents in the public domain available electronically–for free–in a variety of eBook and electronic formats.
+          <div class="year">1971</div>
+        </div>
+        <!-- 1974 -->
+        <div class="time-content">
+          1974 was a breakthrough year. A proposal was published to link Arpa-like networks together into a so-called “inter-network”, which would have no central control and would work around a transmission control protocol (which eventually became TCP/IP).
+          <div class="year">1974</div>
+        </div>
+        <!-- 1977 -->
+        <div class="time-content">
+          1977 was a big year for the development of the Internet as we know it today. It’s the year the first PC modem, developed by Dennis Hayes and Dale Heatherington, was introduced and initially sold to computer hobbyists.
+          <div class="year">1977</div>
+        </div>
+        <!-- 1988 -->
+        <div class="time-content">
+          Also in 1988, Internet Relay Chat (IRC) was first deployed, paving the way for real-time chat and the instant messaging programs we use today.
+          <div class="year">1988</div>
+        </div>
+        <!-- 1989 -->
+        <div class="time-content">
+          When Apple pulled out of the AppleLink program in 1989, the project was renamed and America Online was born. AOL, still in existence today, later on made the Internet popular amongst the average internet users.
+          <div class="year">1989</div>
+        </div>
+        <!-- 1993 -->
+        <div class="time-content">
+          The first widely downloaded Internet browser, Mosaic, was released in 1993. While Mosaic wasn’t the first web browser, it is considered the first browser to make the Internet easily accessible to non-techies.
+          <div class="year">1993</div>
+        </div>
+        <!-- 1996 -->
+        <div class="time-content">
+          In 1996, HoTMaiL (the capitalized letters are an homage to HTML), the first webmail service, was launched.
+          <div class="year">1996</div>
+        </div>
+        <!-- 1998 -->
+        <div class="time-content">
+          In 1998, the first major news story to be broken online was the Bill Clinton/Monica Lewinsky scandal (also referred to as “Monicagate” among other nicknames), which was posted on The Drudge Report after Newsweek killed the story.
+          <div class="year">1998</div>
+        </div>
+        <!-- 2001 -->
+        <div class="time-content">
+          With the dotcom collapse still going strong, Wikipedia launched in 2001, one of the websites that paved the way for collective web content generation/social media.
+          <div class="year">1996</div>
+        </div>
+        <!-- 2007 -->
+        <div class="time-content">
+          Hulu was first launched in 2007, a joint venture between ABC, NBC, and Fox to make popular TV shows available to watch online.
+          <div class="year">1996</div>
+        </div>
+      </div>
+      <div class="left-rule"></div>
+      <div class="old-image">
+        <img src="./images/过去的网络发展图/1969.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1971.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1974.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1977.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1988.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1989.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1993.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1996.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/1998.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/2001.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/过去的网络发展图/2007.png" alt="" width="100%" height="300px" class="mar" />
+      </div>
+      <div class="right-rule"></div>
+      <div class="future-image">
+        <img src="./images/未来/1.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/2.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/3.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/4.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/5.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/6.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/7.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/8.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/9.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/10.png" alt="" width="100%" height="300px" class="mar" />
+        <img src="./images/未来/11.png" alt="" width="100%" height="300px" class="mar" />
+      </div>
     </div>
-</body>
+    <script>
+      const arr = [];
+      const timeBox = document.getElementById('time-box');
+      function getRandomTime() {
+        const hour = Math.floor(Math.random() * 24)
+          .toString()
+          .padStart(2, '0');
+        const min = Math.floor(Math.random() * 60)
+          .toString()
+          .padStart(2, '0');
+        return `${hour}:${min}`;
+      }
+      for (let i = 0; i < 35; i++) {
+        let element = document.createElement('div');
+        element.id = 'time' + i;
+        element.className = 'random-time';
+        element.innerHTML = getRandomTime();
+        timeBox.appendChild(element);
+        arr.push(element);
+      }
+      // // 35个随机时间
+      function updateTime() {
+        if (arr.length > 0) {
+          arr.forEach((item) => {
+            item.innerHTML = getRandomTime();
+          });
+        }
+      }
+      setInterval(updateTime, 1000 * 60);
+    </script>
+  </body>
 </html>
